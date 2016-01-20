@@ -13,13 +13,39 @@
 // ===========
 // Add your own site style includes here
 //@import "site/layout";
-
-.mainBox {
-
-  margin: 0;
+@font-face {
+				font-family: Satisfy-Regular;
+				src: url(../fonts/Satisfy-Regular.ttf);
 }
 .tryIndex {
-				position: relative;
-				top: -112px;
+				margin: 0;
 				overflow: hidden;
+}
+.pad5 {
+				padding: 5px;
+				color: #000000;
+}
+.form-control,
+.form-control + .input-group-btn {
+				.new {
+								background-color: #000000;
+								border-color: #000000;
+				}
+				border-color:  #000000;
+				box-shadow: none;
+}
+.form-control:focus,
+.form-control:focus + .input-group-btn {
+				.new {
+								background-color:#8d8d97;
+								border-color: #8d8d97;
+				}
+				border-color: #8d8d97;
+				box-shadow: none;
+}
+.icon {
+				color: white;
+}
+#datepicker {
+    z-index: 2000;
 }
