@@ -27,7 +27,7 @@ exports = module.exports = function(req, res) {
 				locals.validationErrors = err.errors;
 				console.log(err.errors);
 			} else {
-				locals.enquirySent = true;
+ 				locals.enquirySent = true;
 			}
 
 		});

@@ -68,11 +68,9 @@ Ride.schema.methods.sendNotificationEmail = function(callback) {
 		subject: 'Ride Request',
 		mailBody: mailBody
 	}, callback);
-	console.log("Mail Sent");
-	console.log(callback);
-
 };
 
 Ride.defaultSort = '-createdAt';
 Ride.defaultColumns = 'name, email,';
 Ride.register();
+//

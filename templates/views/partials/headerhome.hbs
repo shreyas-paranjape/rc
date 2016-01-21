@@ -30,9 +30,11 @@
 										<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);background-color:rgba(0,0,0,0);">{{ label }}</a>
 									</li>
 									{{/each}}
-									<li style="font-family:Satisfy-Regular;font-size:20px;padding:25px;">
-										<label data-toggle="modal" data-target="#myModal" style="padding:5px;border-style: solid;border-width:2px;border-color:white;font-weight:normal;outline:none;color:white;background-color:rgba(0,0,0,0);">Book Your Ride</label>
-									</li>
+									{{# each nav}}
+										<li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}} style="font-family:Satisfy-Regular;font-size:20px;padding:25px;">
+											<a href="{{ href }}" style="padding:5px;border-style: solid;border-width:2px;border-color:white;font-weight:normal;outline:none;color:white;background-color:rgba(0,0,0,0);">{{ label }}</a>
+										</li>
+										{{/each}}
 							</ul>
 						</div>
 					</div>
@@ -44,114 +46,3 @@
 	</div>
 	<!-- </div> -->
 </div>
-
-<!-- <button type="button" class="btn btn-info btn-lg" >Open Modal</button> -->
-
-<div class="modal fade" id="myModal" role="dialog">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header" style="text-align:center;">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h2 class="modal-title" id="myModalLabel" style="font-family:Satisfy-Regular;font-size:30px;">Book Your Luxury Private Ride</h2>
-			</div>
-
-			<div class="modal-body">
-				<form method="post">
-					<input type="hidden" name="action" value="submit">
-					<div class="row">
-						<div class="col-lg-3">
-						</div>
-						<div class="col-lg-6">
-							<div class="row pad5">
-								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Name">
-									<input class="form-control" name="name.full" type="text" placeholder="Full Name*" required>
-									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-user"></i></span></button>
-									</span>
-								</div>
-							</div>
-							<div class="row pad5">
-								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Email">
-									<input class="form-control" name="email" type="email" placeholder="Email*" required>
-									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-envelope"></i></span></button>
-									</span>
-								</div>
-							</div>
-							<div class="row pad5">
-								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Contact Number">
-									<input class="form-control" name="contact" type="text" placeholder="Contact Number*" required>
-									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-phone"></i></span></button>
-									</span>
-								</div>
-							</div>
-							<div class="row pad5">
-								<div class="input-group ">
-									<input class="form-control input-group date" name="date" type="text" id="datepicker" placeholder="Prefered Date" required>
-									<span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="icon" aria-hidden="true"><i class="fa fa-calendar"></i></span></button>
-									</span>
-								</div>
-							</div>
-							<div class="row pad5">
-								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter the total number of people">
-									<input class="form-control" name="pax" id="ppl" type="number" min="0" max="50" placeholder="Number Of People">
-									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-users"></i></span></button>
-									</span>
-								</div>
-							</div>
-							<div class="row pad5">
-								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose the preferable time of the day to contact you">
-									<select class="form-control" id="sel1" name="time">
-										<option disabled selected hidden>Preferered Time slot</option>
-										<option value="Morning">Morning</option>
-										<option value="Afternoon">Afternoon</option>
-										<option value="Evening">Evening/Sunset</option>
-										<option value="Dinner">Dinner</option>
-									</select>
-									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-clock-o"></i></span></button>
-									</span>
-								</div>
-							</div>
-							<div class="row pad5">
-								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose your Trip type">
-									<select class="form-control" id="sel1" name="trip">
-										<option disabled selected hidden>Trip type</option>
-										<option value="Couple">Couple</option>
-										<option value="Family">Family</option>
-										<option value="Friends">Group of Friends</option>
-									</select>
-									<span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="icon" aria-hidden="true"><i class="fa fa-briefcase"></i></span></button>
-									</span>
-								</div>
-							</div>
-							<div class="row pad5">
-								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Your queries">
-									<textarea class="form-control" rows="3" name="message" placeholder="Any specific requirement."></textarea>
-									<span class="input-group-btn"><button class="btn btn-default new" type="button" style="height: 87px;"><span class="icon" aria-hidden="true"><i class="fa fa-comment"></i></span></button>
-									</span>
-								</div>
-							</div>
-							<div class="row pad5" style="text-align:center;">
-								<input id="submit" name="submit" type="submit" value="Book your Slot now" class="btn btn-primary btn-lg" style="background-color:#000000;border-color:#000000;">
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!--<script src="scripts/validate.js"></script>-->
-</div>
-</div>
-
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script type="text/javascript">
-	$(function() {
-		$("#datepicker").datepicker();
-	});
-	// $("#datepicker").datepicker({
-	// 	dateFormat: "dd-mm-yy",
-	// 	changeMonth: false, //this option for allowing user to select month
-	// 	changeYear: false,
-	// 	minDate: 0 //this option for allowing user to select from year range //
-	// });
-</script>
