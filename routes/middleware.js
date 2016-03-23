@@ -27,7 +27,7 @@ exports.initLocals = function(req, res, next) {
 		label: 'Home',
 		key: 'home',
 		href: '/'
-	}, ];
+	},];
 	locals.nav = [{
 		label: 'Book a Ride',
 		key: 'book-a-ride',
