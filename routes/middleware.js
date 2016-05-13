@@ -27,12 +27,39 @@ exports.initLocals = function(req, res, next) {
 		label: 'Home',
 		key: 'home',
 		href: '/'
-	},];
-	locals.nav = [{
+	}, {
+		label: 'Gallery',
+		key: 'gallery',
+		href: 'gallery'
+	}, {
+		label: 'Tariff',
+		key: 'tariff',
+		href: 'tariff'
+	}, {
+		label: 'Timings',
+		key: 'timings',
+		href: 'timings'
+	}, {
 		label: 'Book a Ride',
-		key: 'book-a-ride',
+		key: 'bookaride',
+		href: 'bookaride'
+	}, {
+		label: 'Cancellation Policy',
+		key: 'cancellation',
+		href: 'cancel'
+	}, {
+		label: 'Address',
+		key: 'address',
+		href: 'address'
+	}, {
+		label: 'Contact',
+		key: 'conatct',
 		href: 'contact'
 	}, ];
+
+
+
+	locals.nav = [];
 
 	locals.user = req.user;
 

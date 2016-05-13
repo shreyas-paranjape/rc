@@ -15,7 +15,7 @@
 //@import "site/layout";
 @font-face {
 				font-family: Satisfy-Regular;
-				src: url(../fonts/Satisfy-Regular.ttf);
+				src: url("../fonts/Satisfy-Regular.ttf");
 }
 .tryIndex {
 				margin: 0;
@@ -31,13 +31,13 @@
 								background-color: #000000;
 								border-color: #000000;
 				}
-				border-color:  #000000;
+				border-color: #000000;
 				box-shadow: none;
 }
 .form-control:focus,
 .form-control:focus + .input-group-btn {
 				.new {
-								background-color:#8d8d97;
+								background-color: #8d8d97;
 								border-color: #8d8d97;
 				}
 				border-color: #8d8d97;
@@ -47,5 +47,11 @@
 				color: white;
 }
 #datepicker {
-    z-index: 2000;
+				z-index: 2000;
+}
+.pp {
+				.hover {
+								outline: 1px;
+								color: red;
+				}
 }

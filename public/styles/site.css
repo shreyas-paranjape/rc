@@ -5023,7 +5023,7 @@ button.close {
 
 @font-face {
   font-family: Satisfy-Regular;
-  src: url(../fonts/Satisfy-Regular.ttf); }
+  src: url("../fonts/Satisfy-Regular.ttf"); }
 
 .tryIndex {
   margin: 0;
@@ -5052,3 +5052,7 @@ button.close {
 
 #datepicker {
   z-index: 2000; }
+
+.pp .hover {
+  outline: 1px;
+  color: red; }

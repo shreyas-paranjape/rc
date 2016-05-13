@@ -1,32 +1,64 @@
-<div class="container">
-	<h1>Gallery</h1>
-</div>
-<div class="container">
-	<!-- if galleries -->
-	{{#if galleries}}
-		{{#each galleries}}
-		<h2>{{name}}
-			<div class="pull-right text-muted">19th May 2014</div>
-		</h2>
-		<div class="row gallery-images">
-				{{#if heroImage}}
-				<div class="col-sm-4 col-md-4 gallery-image">
-					<img src="{{cloudinaryUrl heroImage width='680' height='680'}}" class="img-rounded">
-				</div>
-				{{/if}}
-				<div class="col-sm-8 col-md-8">
-					<div class="row">
-						{{#each images}}
-						<div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
-							<img src="{{cloudinaryUrl width='300' height='300'}}" class="img-rounded">
-						</div>
-						{{/each}}
-					</div>
-				</div>
+{{>headerhome}}
+<div="row" style="padding:10px">
+	</div>
+
+	<div class="row">
+		<div class="col-lg-1">
 		</div>
-		{{/each}}
-	{{else}}
-	<!-- else -->
-	<h3 class="text-muted">There are no image galleries yet.</h3>
-	{{/if}}
-</div>
+		<div class="col-lg-5">
+			<img src="../images/gal1.jpg" style="width:100%;height:430px;">
+		</div>
+		<div class="col-lg-2">
+		</div>
+		<div class="col-lg-5">
+			<img src="../images/gal2.jpg" style="width:100%;height:430px;">
+		</div>
+	</div>
+
+
+	<div class="row" style="font-family:Satisfy-Regular;text-align:center;font-size:27px">
+		<div class="col-lg-1">
+		</div>
+		<div class="col-lg-5">
+			Open Boat
+		</div>
+		<div class="col-lg-2">
+		</div>
+		<div class="col-lg-5">
+			Open Yacht
+		</div>
+	</div>
+
+	<div="row" style="padding:10px">
+		</div>
+
+
+		<div class="row">
+			<div class="col-lg-1">
+			</div>
+			<div class="col-lg-5">
+				<img src="../images/gal3.jpg" style="width:100%;height:430px;">
+			</div>
+			<div class="col-lg-2">
+			</div>
+			<div class="col-lg-5">
+				<img src="../images/gal4.jpg" style="width:100%;height:430px;">
+			</div>
+		</div>
+
+
+		<div class="row" style="font-family:Satisfy-Regular;text-align:center;font-size:27px">
+			<div class="col-lg-1">
+			</div>
+			<div class="col-lg-5">
+				One Bedroom Premium Yacht
+			</div>
+			<div class="col-lg-2">
+			</div>
+			<div class="col-lg-5">
+				Luxury Yacht
+			</div>
+		</div>
+		<div="row" style="padding:10px">
+			</div>
+			{{>footer}}

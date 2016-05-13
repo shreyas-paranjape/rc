@@ -1,0 +1,99 @@
+{{>headerhome}}
+<div class="row" style="font-family:Satisfy-Regular;text-align:center;text-align:center;padding:30px;">
+	{{#if enquirySubmitted}}
+		<h3>Thanks {{name}} for booking with us.</h3>
+		<h3>Our team will contact you within the next 12 hours. </p>
+			{{else}}
+				<div class="row">
+					<div class="col-lg-3">
+					</div>
+					<div class="col-lg-6">
+
+				<form method="post">
+					<input type="hidden" name="action" value="submit">
+					<div class="row" style="font-family:Satisfy-Regular;text-align:center;padding-top:20px;">
+							<h1>Book a Ride</h1>
+							<div class="row pad5" style="padding-top:20px">
+								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Name">
+									<input class="form-control" name="name.full" type="text" placeholder="Full Name*" required>
+									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-user"></i></span></button>
+									</span>
+								</div>
+							</div>
+							<div class="row pad5">
+								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Email">
+									<input class="form-control" name="email" type="email" placeholder="Email*" required>
+									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-envelope"></i></span></button>
+									</span>
+								</div>
+							</div>
+							<div class="row pad5">
+								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Contact Number">
+									<input class="form-control" name="contact" type="text" placeholder="Contact Number*" required>
+									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-phone"></i></span></button>
+									</span>
+								</div>
+							</div>
+							<div class="row pad5">
+								<div class="input-group ">
+									<input class="form-control input-group date" name="date" type="text" id="datepicker" placeholder="Prefered Date*" required>
+									<span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="icon" aria-hidden="true"><i class="fa fa-calendar"></i></span></button>
+									</span>
+								</div>
+							</div>
+							<div class="row pad5">
+								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter the total number of people">
+									<input class="form-control" name="pax" id="ppl" type="number" min="0" max="50" placeholder="Number Of People*">
+									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-users"></i></span></button>
+									</span>
+								</div>
+							</div>
+							<div class="row pad5">
+								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose the preferable time of the day to contact you">
+									<select class="form-control" id="sel1" name="time">
+										<option disabled selected hidden>Preferered Time Slot</option>
+										<option value="Morning">Morning</option>
+										<option value="Afternoon">Afternoon</option>
+										<option value="Evening">Evening/Sunset</option>
+										<option value="Dinner">Dinner</option>
+									</select>
+									<span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="icon" aria-hidden="true"><i class="fa fa-clock-o"></i></span></button>
+									</span>
+								</div>
+							</div>
+							<div class="row pad5">
+								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose your Trip type">
+									<select class="form-control" id="sel1" name="trip">
+										<option disabled selected hidden>Trip type</option>
+										<option value="Couple">Couple</option>
+										<option value="Family">Family</option>
+										<option value="Friends">Group of Friends</option>
+									</select>
+									<span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="icon" aria-hidden="true"><i class="fa fa-briefcase"></i></span></button>
+									</span>
+								</div>
+							</div>
+							<div class="row pad5">
+								<div class="input-group" data-toggle="tooltip" data-placement="top" title="Your queries">
+									<textarea class="form-control" style="height:65px;" name="message" placeholder="Any specific requirement."></textarea>
+									<span class="input-group-btn"><button class="btn btn-default new" type="button" style="height: 65px;"><span class="icon" aria-hidden="true"><i class="fa fa-comment"></i></span></button>
+									</span>
+								</div>
+							</div>
+							<div class="row pad5" style="text-align:center;padding-bottom: 50px">
+								<input id="submit" name="submit" type="submit" value="Book your slot now" class="btn btn-primary btn-lg" style="background-color:#000000;border-color:#000000;">
+							</div>
+						</div>
+					</div>
+				</div>
+							</form>
+			{{/if}}
+	</div>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#datepicker").datepicker();
+	});
+</script>
+{{>footer}}

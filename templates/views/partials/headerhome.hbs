@@ -1,7 +1,7 @@
 <div id="header" class="tryIndex">
 	<div role="navigation" class="navbar navbar-inverse" style="margin:0px;border-radius:0px;border:none;background-color:rgb(0,0,0);">
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-lg-3">
 				<div class="navbar-header">
 					<div class="row mainBox">
 						<div class="col-lg-1">
@@ -12,33 +12,33 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<div class="col-lg-4">
+						<div class="col-lg-8">
 							<a href="/" class="" style="width:100%;height:auto;padding:0px;">
 								<img alt="Rediscovery Cruises" src="../images/rc-logo.png" style="width:40%;height:auto;margin-bottom: 5px; margin-top: 5px;  margin-left: -5px;" />
 							</a>
 						</div>
-						<div class="col-lg-7" style="text-align:center;padding-top: 20px;border:1px solid white;margin-top:12px">
+						<!-- <div class="col-lg-7" style="text-align:center;padding-top: 20px;border:1px solid white;margin-top:12px">
 							<p style="color:white;font-family:Satisfy-Regular;font-size:20px"> Luxury private rides starting from 8000/-</p>
 							<p style="color:white;font-family:Satisfy-Regular;font-size:20px"> Timings 7 AM to 8 PM everyday. </p>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-9">
 				<div class="row">
-					<div class="col-lg-11">
-						<div class="collapse navbar-collapse" style="padding-right: 15px;padding-top:15px">
+					<div class="col-lg-12">
+						<div class="collapse navbar-collapse" style="padding-right:20px;padding-top:15px">
 							<ul class="nav navbar-nav navbar-right">
 								{{# each navLinks}}
-									<li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}} style="font-family:Satisfy-Regular;font-size:22px;padding:20px;">
+									<li {{#ifeq ../section key}} class="active pp" {{else}} {{/ifeq}} style="font-family:Satisfy-Regular;font-size:22px;padding:3px;">
 										<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);background-color:rgba(0,0,0,0);">{{ label }}</a>
 									</li>
 									{{/each}}
-									{{# each nav}}
+									<!-- {{# each nav}}
 										<li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}} style="font-family:Satisfy-Regular;font-size:20px;padding:25px;">
 											<a href="{{ href }}" style="padding:5px;border-style: solid;border-width:2px;border-color:white;font-weight:normal;outline:none;color:white;background-color:rgba(0,0,0,0);">{{ label }}</a>
 										</li>
-										{{/each}}
+										{{/each}} -->
 							</ul>
 						</div>
 					</div>
