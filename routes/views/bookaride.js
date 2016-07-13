@@ -17,7 +17,7 @@ exports = module.exports = function(req, res) {
 	}, function(next) {
 		var newQuery = new Ride.model(),
 			updater = newQuery.getUpdateHandler(req);
-		console.log("asdf" + req.body.name);
+		console.log(req.body);
 		updater.process(req.body, {
 			flashErrors: false,
 			fields: 'name, email, contact, pax, date, time, trip, message',
